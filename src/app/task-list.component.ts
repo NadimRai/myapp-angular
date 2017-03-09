@@ -8,6 +8,11 @@ import { Task } from './task.model';
   styleUrls: ['./task-list.component.css']
 })
 export class TaskListComponent {
+public selectedCompleteness: string = "notDone";
+onChange(optionFromMenu) {
+  this.selectedCompleteness = optionFromMenu;
+  console.log(this.selectedCompleteness);
+}
   @Input() childTaskList: Task[];
   @Output() clickSender = new EventEmitter();
   editButtonHasBeenClicked(taskToEdit: Task) {
