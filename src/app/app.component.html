@@ -9,4 +9,5 @@
     	[childSelectedTask]="selectedTask"
     	(doneClickedSender)="finishedEditing()">
     </app-edit-task>
+    <app-new-task (newTaskSender)="addTask($event)"></app-new-task>
   </div>
